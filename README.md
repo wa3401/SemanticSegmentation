@@ -22,4 +22,16 @@ From Left to Right - Input, Ground Truth, Model Output
 ## /src Folder
 #### combineMasks.py
 - Takes each of the 4 layers of every mask image then saves them as 256x256x4 tensors for use as the ground truth
-#### 
+#### dataTest.py
+- A test file that was used before we switched labeling softwares becuase LabelBox API did not integrate with our system well
+#### helper.py
+- This file contains helper functions that are used to plot and show images such as the array of images seen above
+#### imageData.py
+- Defines a dataset class used for training the UNET model
+#### loss.py
+- Defines a function dice_loss that helps to computes the pixelwise cross entropy loss
+#### main.py
+- The main file that is run to complete training
+- Consits of dataset creation, training loop with validation, model saving, and test loop
+#### semanticSplit.py
+- Script used to split image files between Jamie and myself for labeling purposes
